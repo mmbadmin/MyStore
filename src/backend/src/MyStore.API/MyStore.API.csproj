@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup Label="Globals">
+      <SccProjectName>SAK</SccProjectName>
+      <SccProvider>SAK</SccProvider>
+      <SccAuxPath>SAK</SccAuxPath>
+      <SccLocalPath>SAK</SccLocalPath>
+    </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <CodeAnalysisRuleSet>..\..\_stylecop\MyStore.Common.Analyzers.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="..\..\_stylecop\stylecop.json" Link="stylecop.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CacheManager.Core" Version="1.2.0" />
+        <PackageReference Include="CacheManager.Microsoft.Extensions.Caching.Memory" Version="1.2.0" />
+        <PackageReference Include="CacheManager.Microsoft.Extensions.Configuration" Version="1.2.0" />
+        <PackageReference Include="CacheManager.Microsoft.Extensions.Logging" Version="1.2.0" />
+        <PackageReference Include="EPPlus" Version="4.5.3.3" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.164">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\common\MyStore.Common.API\MyStore.Common.API.csproj" />
+      <ProjectReference Include="..\MyStore.Application\MyStore.Application.csproj" />
+      <ProjectReference Include="..\MyStore.Domain\MyStore.Domain.csproj" />
+      <ProjectReference Include="..\MyStore.Infrastructure\MyStore.Infrastructure.csproj" />
+    </ItemGroup>
+</Project>

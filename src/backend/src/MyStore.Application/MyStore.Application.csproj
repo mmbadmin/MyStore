@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup Label="Globals">
+      <SccProjectName>%24/Ram/MyStore/backend/src/MyStore.Application</SccProjectName>
+      <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+      <SccLocalPath>.</SccLocalPath>
+    </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>disable</Nullable>
+        <CodeAnalysisRuleSet>..\..\_stylecop\MyStore.Common.Analyzers.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="..\..\_stylecop\stylecop.json" Link="stylecop.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CacheManager.Core" Version="1.2.0" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.164">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\common\MyStore.Common.Application\MyStore.Common.Application.csproj" />
+        <ProjectReference Include="..\..\common\MyStore.Common.Application\MyStore.Common.Application.csproj" />
+        <ProjectReference Include="..\..\common\MyStore.Common.Utilities\MyStore.Common.Utilities.csproj" />
+        <ProjectReference Include="..\MyStore.Domain\MyStore.Domain.csproj" />
+        <ProjectReference Include="..\MyStore.Domain\MyStore.Domain.csproj" />
+    </ItemGroup>
+</Project>

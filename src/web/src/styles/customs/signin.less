@@ -1,0 +1,83 @@
+.signin-wrapper {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007ea7;
+    background-image: linear-gradient(315deg, #007ea7 0%, #80ced7 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .signin-content {
+        max-width: 50%;
+        min-width: 450px;
+        background-color: #fff;
+        padding: 10px 40px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    img.signin-logo {
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    h3.signin-brand {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-weight: bold;
+    }
+
+    .singup-form {
+        width: 400px;
+        .ant-row.ant-form-item:first-child,
+        .ant-row.ant-form-item:last-child {
+            margin-top: 25px;
+        }
+
+        .ant-row.ant-form-item {
+            margin-bottom: 5px;
+        }
+
+        button {
+            min-width: 100px;
+        }
+
+        .signin-button-group {
+            .submit-button {
+                float: left;
+            }
+
+            .register-button {
+                width: 100px;
+                float: right;
+            }
+
+            ::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }
+    }
+
+    .anticon {
+        vertical-align: middle;
+    }
+
+    .fa::before {
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width: 776px) {
+        .signin-content {
+            max-width: 100%;
+        }
+    }
+}
